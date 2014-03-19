@@ -10,7 +10,61 @@
 </script>
     <script src="flat-ui-official/js/bootstrap.min.js">
 </script>
+
+<script>
+	var menu=function(){
+	var t=15,z=50,s=6,a;
+	function dd(n){this.n=n; this.h=[]; this.c=[]}
+	dd.prototype.init=function(p,c){
+		a=c; var w=document.getElementById(p), s=w.getElementsByTagName('ul'), l=s.length, i=0;
+		for(i;i<l;i++){
+			var h=s[i].parentNode; this.h[i]=h; this.c[i]=s[i];
+			h.onmouseover=new Function(this.n+'.st('+i+',true)');
+			h.onmouseout=new Function(this.n+'.st('+i+')');
+		}
+	}
+	dd.prototype.st=function(x,f){
+		var c=this.c[x], h=this.h[x], p=h.getElementsByTagName('a')[0];
+		clearInterval(c.t); c.style.overflow='hidden';
+		if(f){
+			p.className+=' '+a;
+			if(!c.mh){c.style.display='block'; c.style.height=''; c.mh=c.offsetHeight; c.style.height=0}
+			if(c.mh==c.offsetHeight){c.style.overflow='visible'}
+			else{c.style.zIndex=z; z++; c.t=setInterval(function(){sl(c,1)},t)}
+		}else{p.className=p.className.replace(a,''); c.t=setInterval(function(){sl(c,-1)},t)}
+	}
+	function sl(c,f){
+		var h=c.offsetHeight;
+		if((h<=0&&f!=1)||(h>=c.mh&&f==1)){
+			if(f==1){c.style.filter=''; c.style.opacity=1; c.style.overflow='visible'}
+			clearInterval(c.t); return
+		}
+		var d=(f==1)?Math.ceil((c.mh-h)/s):Math.ceil(h/s), o=h/c.mh;
+		c.style.opacity=o; c.style.filter='alpha(opacity='+(o*100)+')';
+		c.style.height=h+(d*f)+'px'
+	}
+	return{dd:dd}
+}();
+</script>
+
     <style type="text/css">
+	/*search menu*/
+//body {margin:25px; font:11px Verdana,Arial; background:#00CC99;}
+ul.menu {list-style:none; margin:0; padding:0; width: 100%;
+    padding-top: 0px;}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#000; text-decoration:none}
+ul.menu li {position:relative; float:left; margin-right:2px}
+ul.menu ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #aaa; border-top:none; width:148px; margin:0}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
+ul.menu ul li a:hover {background-color:#c5c5c5}
+ul.menu ul ul {left:148px; top:-1px}
+ul.menu .menulink {border:1px solid #aaa; padding:5px 7px 7px; font-weight:bold; background-color:#00CC99; width:134px}
+ul.menu .menulink:hover, ul.menu .menuhover {background-color:#0000FF}
+ul.menu .sub {background-color:#000FF}
+ul.menu .topline {border-top:1px solid #aaa}
+
 /*head*/
     body{background-image: url(./cwp/image/hpbg.jpg)}
     body{background-color: rgb(223, 218, 254);}
@@ -252,55 +306,60 @@ top: -35px;
           <a class="logo" href="/"><img class="logo" src=
           "cwp/image/K.gif" width="100px" height="100px">
           <strong>Kaufhaus</strong></a>
+		  
+		  
+		
+		
           <div class="todo-search">
             <input class="todo-search-field" type="search" value=""
             placeholder="Search"> 
               <div class="col-xs-3" id="hpcategoryddm">
-          <div class="btn-group select select-block">
-            <button class=
-            "btn dropdown-toggle clearfix btn-primary" data-toggle=
-            "dropdown" id="dropdown" value="All"><span class=
-            "filter-option pull-left">ENTIRE</span>&nbsp;</button>
-            <ul class="dropdown-menu dropdown-inverse" role="menu"
-            style=
-            "overflow-y: auto; min-height: 108px; max-height: 68px;">
-            <li >
-                <span class=
-                "pull-left"><strong>handsome alan</strong></span>
-              </li>
-                <li rel="0">
-                <a tabindex="-1" href="#" class=""><span class=
-                "pull-left">Living Room</span></a>
-              </li>
-              <li rel="1" class="">
-                <a tabindex="-1" href="#" class=
-                "active"><span class="pull-left">Bedroom</span></a>
-              </li>
-                 <li >
-                <span class=
-                "pull-left"><strong>Electronic</strong></span>
-              </li>
-              <li rel="2" class="">
-                <a tabindex="-1" href="#" class=
-                ""><span class="pull-left">Mobile</span></a>
-              </li>
-              <li rel="3">
-                <a tabindex="-1" href="#" class=""><span class=
-                "pull-left">Laptop</span></a>
-              </li>
-                 <li >
-                <span class=
-                "pull-left"><strong>Food</strong></span>
-              </li>
-              <li rel="4" class="">
-                <a tabindex="-1" href="#" class=""><span class=
-                "pull-left">Food</span></a>
-              </li>
-            </ul>
+				<div class="btn-group select select-block">
+				
+				
+		<ul class="menu" id="menu">
+	<li><a href="#" class="menulink">All</a>
+		<ul>
+			<li>
+				<a href="#">Furniture</a>
+				<ul>
+					<li class="topline"><a href="#">Living Room</a></li>
+					<li><a href="#">Bedroom</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="sub">Electronics</a>
+				<ul>
+					<li class="topline"><a href="#">Laptop</a></li>
+					<li><a href="#">Mobile Phone</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="sub">Apparel</a>
+				<ul>
+					<li class="topline"><a href="#">Top</a></li>
+					<li><a href="#">Bottom</a></li>
+					<li><a href="#">Accessories</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Food</a></li>
+		</ul>
+	</li>
+</ul>
+
+				
+				
+				
+			
+           
           </div>
         </div>
           </div>
             
+			
+			
+			
+			
           <div id="link">
             <ul id="link">
               <% if(!login) { %>
@@ -365,6 +424,7 @@ top: -35px;
                   </li>
                   <li class="dropdown">
                     <a href="/food">Food</a>
+			
                   </li><% if(admin){ %>
                   <li class="dropdown" style=
                   "position:relative;left:750px">
@@ -411,5 +471,11 @@ top: -35px;
         </li>
       </ul>
     </div>
+	
+	<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
   </body>
 </html>
