@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style type="text/css">
+table#myCart{ filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;width:450;margin:50px; margin-right: auto;text-align:center;
+margin-left: auto;padding:20px;}
+table#myCart th{background-color: lightgrey;
+    text-align:center;width:240px
+}
+#myCart tr{border-bottom: 1px solid lightgrey;}
+#myCart img{width:200px;height:180px;}
+table#myCart td{
+    background-color:#edeff1;
+    
+   padding:20px;
+}
+ table tr { height:150px; }
+    
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="main">
+      <form method="post" action="">
+        <table id="myCart" cellpadding="40" >
+          <tr>
+            <th>
+              Image
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Operation
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <img src="./cwp/image/coffeeTable1.jpg"><br>
+    
+              <a href="/coffeeTable">more details..</a>
+            </td>
+            <td>
+              HEMNES, Coffee table
+            </td>
+            <td id="price">
+              $149.99
+            </td>
+            <td id="qty">
+              1
+            </td>
+            <td>
+              <a href="#" id="del">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./cwp/image/Dell_Inspiron.jpg">
+                <a href="#">more details..</a>
+            </td>
+            <td>
+              Dell Inspiron
+            </td>
+            <td id="price">
+              $359.99
+            </td>
+            <td id="qty">
+              2
+            </td>
+            <td>
+              <a href="#" id="del">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"style="text-align:left">
+              Total:&nbsp;&nbsp;&nbsp;<span id="totalPrice"></span>
+            </td>
+            <td>
+              <button type="submit" class="btn btn-primary" href=
+              "#">Continue</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+      <script>
+         $( document ).ready(function total(){
+         var sum=0;
+         var l = $('tr').size()-2;
+         if(l>=1){
+         for(var i=1;i<=l;i++){
+            var price = parseFloat($('tr').eq(i).find('#price').text().replace("$",""));
+            var qty = parseInt($('tr').eq(i).find('#qty').text());
+            sum=sum+price*qty;}
+            $('#totalPrice').text("$"+sum);}
+             else $('#totalPrice').text("$"+sum);
+         })
+     
+     $("a[id='del']").click(function(event){
+    $(this).parent().parent().remove()
+     
+         var sum=0;
+         var l = $('tr').size()-2;
+         if(l>=1){
+         for(var i=1;i<=l;i++){
+            var price = parseFloat($('tr').eq(i).find('#price').text().replace("$",""));
+            var qty = parseInt($('tr').eq(i).find('#qty').text());
+            sum=sum+price*qty;}
+              $('#totalPrice').text("$"+sum);
+            }
+        else $('#totalPrice').text("$"+sum);
+         
+     })
+     </script>
+   
+  <script>
+         
+
+   $(".col-xs-3 ul li a").click(function(){
+
+      $(".filter-option.pull-left").text($(this).text());
+      $(".col-xs-3 button").val($(this).text());
+      total();
+
+   });
+</script>
+    
+  </body>
+</html>

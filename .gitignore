@@ -1,0 +1,6 @@
+Session.vim
+tags
+node_modules
+.vimsession
+*.swp
+images

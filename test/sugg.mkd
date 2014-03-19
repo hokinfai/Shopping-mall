@@ -1,0 +1,4 @@
+1. 修改密码更新
+2. addNewItem图片换个
+3. login,new account对齐
+4. coffeetable命名改变，下面太长

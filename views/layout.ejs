@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content=
+    "text/html; charset=utf-8">
+    <link rel="stylesheet" href=
+    "flat-ui-official/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="flat-ui-official/css/flat-ui.css">
+    <script src="flat-ui-official/js/jquery-1.8.3.min.js">
+</script>
+    <script src="flat-ui-official/js/bootstrap.min.js">
+</script>
+    <style type="text/css">
+/*head*/
+    body{background-image: url(./cwp/image/hpbg.jpg)}
+    body{background-color: rgb(223, 218, 254);}
+
+    div#navbar{background-color: rgb(205, 236, 255);padding-bottom: 0px;}
+
+    #navbar-top{position: relative;
+    min-height: 39px;
+    zoom: 1;
+    margin: 0 0 0 10px;}
+
+    div.todo-search{
+    width: 400px;
+    padding: 5px 21px 7px;
+    position: relative;
+    left: 345px;
+    top: -50px;}
+
+
+    ul.nav{display: -webkit-box;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -4px;
+    left: 166px;
+    white-space: nowrap;
+    line-height: 32px;
+
+    left: 740px;
+    top: 49px}
+    div#link {
+    position: relative;
+    right: 1px;
+    bottom: 85px;
+    margin-right: 0px;
+    left: 720px;
+    width: 560px;
+    }
+    ul#link{margin-left: -46px;}
+    ul#link li{list-style: none;display: inline-block;margin-left: 10px;bottom: -4px;
+    left: 166px;}
+    ul#link a:hover{text-decoration: underline;}
+    ul#link li:nth-child(n+2) a{border-left: 1px solid #CCC;padding-left: 10px;}
+    ul#link a{font-size:16px;}
+    /*a.logo{left: 9px;
+    bottom: -5px;
+    width: 106px;
+    height: 40px;}*/
+    div#search{padding-top:0px;padding-left: 0px;padding-right: 0px;}
+    div#search ul.nav navbar-nav navbar-left{left: 24px;
+    top: 0px;}
+    .col-md-9 {
+    width: 100%;
+    margin-top: -54px;
+    padding-top: 0px;
+
+    }
+
+    .navbar {border-radius: 0px;}
+    .navbar-collapse .navbar-nav.navbar-left:first-child {
+    margin-left: -728px;
+    margin-top: -49px;
+    }
+
+    ul.dropdown-menu{visibility: hidden;z-index: 200;}
+
+    /*main*/
+
+    /*  for homepage*/
+    .carousel {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    width: 1170px;
+    height: 416px;
+    margin-top: 30px;
+    z-index:100;
+    margin-bottom: 30px;
+    left: 0px;
+
+    }
+    /*for login & register form & changePassword-form*/
+     div.login-form{background-color: rgba(237, 239, 241, 0.73);width:400px;margin: 60px;
+    left: 186px}
+
+    div.register-form,div.changePassword-form {
+        filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+    width: 511px;
+    padding: 4px 66px 36px;
+    position: relative;
+    border-radius: 6px;
+    padding-right: 85px;
+    background-color: #edeff1;
+    margin: 60px;
+    left: 186px;
+    }
+    /*for shopping list*/
+    ul#img_list{display: -webkit-box;}
+    ul#img_list>li{ display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 30px;}
+
+    div#product_list{padding:50px; width:1203px;
+    background-color: #edeff1;
+      margin-top:65px;
+        margin-bottom: 65px;
+     filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9; 
+    position: relative;}
+    div#sortddm{
+    position: relative;
+    left:1000px;
+        top:10px;
+        z-index:200;
+
+    width: 126px;
+    }
+    /*for food page*/
+    .pagination {
+    position: relative;
+    left: 456px;
+    }
+    /* for prodct detail page*/
+     div#left {
+    width: 500px;
+        height: 700px;
+    background-color: #edeff1;
+    position: relative;
+    margin: 12px;
+    float: left;
+    filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+    margin-top: 0px;
+    }
+    div#product-image {
+    width: 400px;
+    height: 400px;
+    background-size: 400px,400px;
+    background-repeat: no-repeat;
+
+    margin: 50px;
+    }
+    div#product_list div#img_list_area img{width:200px;height:180px
+
+    }
+    div#product-images{margin: 50px;width:300px}
+    div#product-images ul li{display: inline-block;}
+     div#product-images ul{padding-left: 0px;}
+       div#right {
+    width: 500px;
+    height: 700px;
+    background-color: #edeff1;
+    filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+    position: relative;
+    margin: 50px;
+    left: 600px;
+    }
+    div#right >*{
+    position: relative;
+    bottom: 699px;
+    left: 10px;
+    color:black;
+    }
+
+    div#quantityddm{
+    position: relative;
+
+
+    width: 126px;
+    }
+    a#addToCart {
+   margin-top: 20px;
+
+    }
+    /*.select.select-block {
+    width: 200px;
+    }*/
+    table#details{border:"0"; width:450px;}
+    table#details tr { width:450px;height:auto; }
+    table#details td{padding-left:2px;}
+    /*for addNewItem*/
+    div.addNewItem-form {
+    filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+    width: 511px;
+    padding: 4px 66px 36px;
+    position: relative;
+    border-radius: 6px;
+    padding-right: 85px;
+    background-color: #edeff1;
+        height: auto;
+    margin: 60px;
+    left: 186px;
+    }
+    div#categoryddm{width:156px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 11px;}
+        div#hpcategoryddm {
+width: 146px;
+padding-left: 0px;
+padding-right: 0px;
+margin-bottom: 11px;
+left: -177px;
+top: -35px;
+}
+
+    div#footer {
+    position:relative;
+    bottom: 0px;
+    background-color: rgb(205, 236, 255);
+    width: 100%;
+    }
+    ul#footer {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: inherit;
+    width: 100%;
+    white-space: nowrap;
+    padding-top: 0px;
+    line-height: 4;
+    bottom: 0px;
+    height: 80px;
+    padding-left: 572px;
+    }
+    ul#footer>li{display: inline-block;
+    padding-right:20px;padding-top: 12px;}
+    ul#footer>li>a:hover{text-decoration: underline;}
+
+    </style>
+    <title>
+      <%= title %>
+    </title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <div id="navbar-top">
+          <a class="logo" href="/"><img class="logo" src=
+          "cwp/image/K.gif" width="100px" height="100px">
+          <strong>Kaufhaus</strong></a>
+          <div class="todo-search">
+            <input class="todo-search-field" type="search" value=""
+            placeholder="Search"> 
+              <div class="col-xs-3" id="hpcategoryddm">
+          <div class="btn-group select select-block">
+            <button class=
+            "btn dropdown-toggle clearfix btn-primary" data-toggle=
+            "dropdown" id="dropdown" value="All"><span class=
+            "filter-option pull-left">All</span>&nbsp;</button>
+            <ul class="dropdown-menu dropdown-inverse" role="menu"
+            style=
+            "overflow-y: auto; min-height: 108px; max-height: 68px;">
+            <li >
+                <span class=
+                "pull-left"><strong>handsome alan</strong></span>
+              </li>
+                <li rel="0">
+                <a tabindex="-1" href="#" class=""><span class=
+                "pull-left">Living Room</span></a>
+              </li>
+              <li rel="1" class="">
+                <a tabindex="-1" href="#" class=
+                "active"><span class="pull-left">Bedroom</span></a>
+              </li>
+                 <li >
+                <span class=
+                "pull-left"><strong>Electronic</strong></span>
+              </li>
+              <li rel="2" class="">
+                <a tabindex="-1" href="#" class=
+                ""><span class="pull-left">Mobile</span></a>
+              </li>
+              <li rel="3">
+                <a tabindex="-1" href="#" class=""><span class=
+                "pull-left">Laptop</span></a>
+              </li>
+                 <li >
+                <span class=
+                "pull-left"><strong>Food</strong></span>
+              </li>
+              <li rel="4" class="">
+                <a tabindex="-1" href="#" class=""><span class=
+                "pull-left">Food</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+            
+          <div id="link">
+            <ul id="link">
+              <% if(!login) { %>
+              <li class="active">
+                <a class="brand" href="/login">Log in</a>
+              </li>
+              <li>
+                <a href="/register">New Account</a>
+              </li><% }else{ %>
+              <li>
+                <a href="#">My Cart</a>
+              </li>
+              <li>
+                <a href="#">User Setting</a>
+              </li>
+              <li>
+                <a href="#">Order History</a>
+              </li>
+              <li>
+                <a href="/logout">Log out</a>
+              </li><% } %>
+            </ul>
+          </div>
+        </div>
+        <div id="navbar-bottom">
+          <div class="col-md-9" id="search">
+            <nav class="navbar navbar-inverse navbar-embossed"
+            role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                data-toggle="collapse" data-target=
+                "#navbar-collapse-01"><span class="sr-only">Toggle
+                navigation</span></button>
+              </div>
+              <div class="collapse navbar-collapse" id=
+              "navbar-collapse-01">
+                <ul class="nav navbar-nav navbar-left">
+                  <li class="dropdown">
+                    <a href="www.google.com" class=
+                    "dropdown-toggle" data-toggle=
+                    "dropdown"><span>Furniture</span></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">Living Room</a>
+                      </li>
+                      <li>
+                        <a href="#">Bedroom</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"
+                    data-toggle="dropdown"><span>Electronics</span></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">Laptop</a>
+                      </li>
+                      <li>
+                        <a href="#">Mobile Phone</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="/food">Food</a>
+                  </li><% if(admin){ %>
+                  <li class="dropdown" style=
+                  "position:relative;left:750px">
+                    <a href="www.google.com" class=
+                    "dropdown-toggle" data-toggle=
+                    "dropdown"><span>Vendor</span></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="/addNewItem">Add a New Item</a>
+                      </li>
+                      <li>
+                        <a href="#">Delete Items</a>
+                      </li>
+                      <li>
+                        <a href="#">Change Items' Info</a>
+                      </li>
+                    </ul>
+                  </li><% } %>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="container" class="container">
+      <div id="containbody">
+        <% if (success) { %>
+        <div class="alert alert-success">
+          <%= success %>
+        </div><% } %><% if (error) { %>
+        <div class="alert alert-danger">
+          <%= error %>
+        </div><% } %><%- body %>
+      </div>
+    </div>
+    <div id="footer">
+      <ul id="footer">
+        <li class="active">
+          <a class="brand" href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

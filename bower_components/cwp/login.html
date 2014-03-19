@@ -1,0 +1,243 @@
+<head>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">  
+  <link rel="stylesheet" href="flat/bootstrap/css/bootstrap.css">
+  <script src="flat/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="flat/css/flat-ui.css">
+    <link rel="stylesheet" href="flat/css/demo.css">
+
+</head>
+
+<html>
+<style type="text/css">
+/*head*/
+div#navbar{background-color: blanchedalmond;padding-bottom: 24px;}
+
+#navbar-top{position: relative;
+padding: 0;
+min-height: 39px;
+_height: 39px;
+zoom: 1;
+margin: 0 0 0 10px;}
+
+div.todo-search{
+width: 400px;
+padding: 5px 21px 7px;
+position: relative;
+left: 245px;
+top: -50px;}
+
+ul.nav{display: -webkit-box;
+margin: 0;
+padding: 0;
+position: absolute;
+bottom: -4px;
+left: 166px;
+white-space: nowrap;
+line-height: 32px;
+
+left: 740px;
+top: 49px}
+
+
+/*a.logo{left: 9px;
+bottom: -5px;
+width: 106px;
+height: 40px;}*/
+div#search{padding-top:25px}
+div#search ul.nav navbar-nav navbar-left{left: 24px;
+top: 0px;}
+.col-md-9 {
+width: 100%;
+margin-top: -54px;
+padding-top: 0px;
+
+}
+ul.nav navbar-nav navbar-left span{cursor: pointer;}
+
+.navbar-collapse .navbar-nav.navbar-left:first-child {
+margin-left: -728px;
+margin-top: -49px;
+}
+ul.dropdown-menu{visibility: hidden;z-index: 200;}
+
+
+/*main*/
+.login-form{width: 500px;height: 280px;margin:70px;}
+div#footer {
+position: relative;
+bottom: 0px;
+background-color: blanchedalmond;
+width: 100%;
+}
+ul#footer {
+list-style: none;
+margin: 0;
+padding: 0;
+position: relative;
+left: inherit;
+width: 100%;
+white-space: nowrap;
+padding-top: 0px;
+line-height: 4;
+bottom: 0px;
+height: 80px;
+padding-left: 388px;
+}
+ul#footer>li{display: inline-block;
+padding:10px;}
+ul#footer>li>a:hover{text-decoration: underline;}
+
+</style>
+
+
+<body>
+
+  <header>
+    <div id="navbar">
+      <div id="navbar-top">
+        <a class="logo" href="homepage1.html">
+          <img class="logo" src="image\K.png"width="100px" height="100px";>
+          <strong>Kaufhaus</strong> 
+        </a>
+
+        <div class="todo-search">
+                  <input class="todo-search-field" type="search" value="" placeholder="Search">
+        </div>
+
+              <ul class="nav" id="link">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+              </ul>
+      
+      </div>
+
+      <div id="navbar-bottom">
+
+        <div class="col-md-9" id="search">
+                <nav class="navbar navbar-inverse navbar-embossed"role="navigation">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                        <span class="sr-only">Toggle navigation</span>
+                      </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                      <ul class="nav navbar-nav navbar-left">           
+                        <li class="dropdown">
+                            <a href="www.google.com" class="dropdown-toggle" data-toggle="dropdown"><span>Furniture </span><b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">>Living Room</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Bedroom</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Electronics </span><b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Laptop</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Mobile Phone</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apparel <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Top</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Bottom</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Accessories</a></li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" >Food
+                            </a>
+                           
+                        </li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+                </nav><!-- /navbar -->
+        </div>  
+
+
+      </div>  
+      
+
+  
+
+      
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </header>
+
+  <div class="main">
+<div class="login-form">
+            <div class="form-group">
+              <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
+              <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+
+            <a class="btn btn-primary btn-lg btn-block" href="#">Login</a>
+            <a class="login-link" href="#">Lost your password?</a>
+            <a class="login-link" href="#">Creat a new account?</a>
+          </div>
+<div id="footer">
+        <ul id="footer">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+        </ul> 
+
+
+      </div>
+
+
+
+
+
+
+
+  </div>
+<script src="flat/js/jquery-2.0.3.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<head>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">  
+  <link rel="stylesheet" href="flat/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="flat/css/flat-ui.css">
+
+</head>
+
+<html>
+<style type="text/css">
+/*head*/
+div#navbar{background-color: blanchedalmond;padding-bottom: 24px;}
+
+#navbar-top{position: relative;
+padding: 0;
+min-height: 39px;
+_height: 39px;
+zoom: 1;
+margin: 0 0 0 10px;}
+
+div.todo-search{
+width: 400px;
+padding: 5px 21px 7px;
+position: relative;
+left: 245px;
+top: -50px;}
+
+ul.nav{display: -webkit-box;
+margin: 0;
+padding: 0;
+position: absolute;
+bottom: -4px;
+left: 166px;
+white-space: nowrap;
+line-height: 32px;
+z-index: 20;
+left: 740px;
+top: 49px}
+
+
+/*a.logo{left: 9px;
+bottom: -5px;
+width: 106px;
+height: 40px;}*/
+div#search{padding-top:25px}
+div#search ul.nav navbar-nav navbar-left{left: 24px;
+top: 0px;}
+.col-md-9 {
+width: 100%;
+margin-top: -54px;
+padding-top: 0px;
+
+}
+
+.navbar-collapse .navbar-nav.navbar-left:first-child {
+margin-left: -728px;
+margin-top: -49px;
+}
+ul.dropdown-menu{visibility: hidden;}
+
+ul,ol{list-style: none;}
+/*main*/
+ul#img_list{display: -webkit-box;}
+ul#img_list>li{ display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 30px;}
+
+  div#product_list{padding: 10px;}
+ul#footer {
+list-style: none;
+margin: 0;
+padding: 0;
+position: relative;
+left: inherit;
+width: 100%;
+white-space: nowrap;
+padding-top: 0px;
+line-height: 4;
+bottom: 0px;
+height: 80px;
+padding-left: 388px;
+}
+ul#footer>li{display: inline-block;
+padding:10px;}
+ul#footer>li>a:hover{text-decoration: underline;}
+
+div#footer {
+position: relative;
+bottom: 0px;
+background-color: blanchedalmond;
+width: 100%;
+}
+
+.floating-menu {
+position: fixed;
+background: transparent;
+border: 1px solid transparent;
+width: 140px;
+z-index: 100;
+top: 250px;
+right: -12px;
+}
+
+</style>
+
+
+<body>
+
+  <header>
+    <div id="navbar">
+      <div id="navbar-top">
+        <a class="logo" href="homepage1.html">
+          <img class="logo" src="image\K.png"width="100px" height="100px";>
+          <strong>Kaufhaus</strong> 
+        </a>
+
+        <div class="todo-search">
+                  <input class="todo-search-field" type="search" value="" placeholder="Search">
+        </div>
+
+              <ul class="nav" id="link">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+              </ul>
+      
+      </div>
+
+      <div id="navbar-bottom">
+
+        <div class="col-md-9" id="search">
+                <nav class="navbar navbar-inverse navbar-embossed"role="navigation">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                        <span class="sr-only">Toggle navigation</span>
+                      </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                      <ul class="nav navbar-nav navbar-left">           
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Living Room</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Bedroom</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Electronics <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Laptop</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Mobile Phone</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apparel <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Top</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Bottom</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Accessories</a></li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" >Food
+                            </a>
+                           
+                        </li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+                </nav><!-- /navbar -->
+        </div>  
+
+
+      </div>  
+      
+</header>
+<div class="main">
+  <div id="product_list">
+    <div id="img_list_area">
+        <ul id="img_list">
+            <li>
+               <div id="product">
+                <div id="img">
+               <a href=""><img src="image\Quilted_Panel_Sweatshirt.jpg"width="200px"></a> 
+                </div> 
+                <a href="">Quilted Panel Sweatshirt</a>
+                <p><a href="">$29.95</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p>       
+               </div>
+            </li>
+
+            <li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\Striped_Knitwear.jpg" width="200px"></a>
+                </div>
+                <a href="">Striped Knitwear</a>
+                 <p><a href="">$29.99</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p>   
+                </div>
+            </li>
+
+
+            
+
+            
+
+        </ul>
+
+
+
+
+    </div>
+</div>
+
+
+
+<div class="floating-menu">
+<input type="image" src="image/price.jpg" name="image" width="120" height="90">
+</div>
+
+
+
+
+
+
+
+
+
+
+ <div id="footer">
+        <ul id="footer">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+        </ul> 
+
+
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="flat/js/jquery-1.8.3.min.js"></script>
+  <script src="flat/js/bootstrap.min.js"></script>
+
+  
+
+
+
+
+</body>
+</html>

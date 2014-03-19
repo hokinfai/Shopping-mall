@@ -1,9 +1,9 @@
-#部署
+﻿#部署
 
 目前只是一个空的框架而已，当然已经可以运行了
 
 ```
-git clone https://username:password@bitbucket.org/ceclinux/shopmall
+git clone https://username:password@bitbucket.org/ceclinux/shopmall (in the first time only)
 进入shopmall文件夹
 npm install
 bower install

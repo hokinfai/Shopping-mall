@@ -1,0 +1,452 @@
+<head>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">  
+  <link rel="stylesheet" href="flat/bootstrap/css/bootstrap.css">
+  <script src="flat/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="flat/css/flat-ui.css">
+    <link rel="stylesheet" href="flat/css/demo.css">
+
+</head>
+
+<html>
+<style type="text/css">
+/*head*/
+div#navbar{background-color: blanchedalmond;padding-bottom: 24px;}
+
+#navbar-top{position: relative;
+padding: 0;
+min-height: 39px;
+_height: 39px;
+zoom: 1;
+margin: 0 0 0 10px;}
+
+div.todo-search{
+width: 400px;
+padding: 5px 21px 7px;
+position: relative;
+left: 245px;
+top: -50px;}
+
+ul.nav{display: -webkit-box;
+margin: 0;
+padding: 0;
+position: absolute;
+bottom: -4px;
+left: 166px;
+white-space: nowrap;
+line-height: 32px;
+z-index: 20;
+left: 740px;
+top: 49px}
+
+
+/*a.logo{left: 9px;
+bottom: -5px;
+width: 106px;
+height: 40px;}*/
+div#search{padding-top:25px}
+div#search ul.nav navbar-nav navbar-left{left: 24px;
+top: 0px;}
+.col-md-9 {
+width: 100%;
+margin-top: -54px;
+padding-top: 0px;
+
+}
+
+.navbar-collapse .navbar-nav.navbar-left:first-child {
+margin-left: -728px;
+margin-top: -49px;
+}
+ul.dropdown-menu{visibility: hidden;}
+
+ul,ol{list-style: none;}
+/*main*/
+ul#img_list{display: -webkit-box;}
+ul#img_list>li{ display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 30px;}
+
+  div#product_list{padding: 10px;}
+ul#footer {
+list-style: none;
+margin: 0;
+padding: 0;
+position: relative;
+left: inherit;
+width: 100%;
+white-space: nowrap;
+padding-top: 0px;
+line-height: 4;
+bottom: 0px;
+height: 80px;
+padding-left: 388px;
+}
+ul#footer>li{display: inline-block;
+padding:10px;}
+ul#footer>li>a:hover{text-decoration: underline;}
+
+div#footer {
+position: relative;
+bottom: 0px;
+background-color: blanchedalmond;
+width: 100%;
+}
+
+/* Page Numbers */
+.pages {
+ font: 83%/1.4 arial, helvetica, sans-serif;
+    padding: 1em;
+    margin: 1em 0;
+    clear: left;
+    font-size: 85%;
+    float:right;
+}
+
+.pages a, .pages span {
+	color:#003366;
+    display: block;
+    float: left;
+    padding: 0.2em 0.5em;
+    margin-right: 0.1em;
+    border: 1px solid #fff;
+    background: #fff;
+}
+
+.pages span.current {
+    border: 1px solid #2E6AB1;
+    font-weight: bold;
+    background: #2E6AB1;
+    color: #fff;
+}
+
+.pages a {
+    border: 1px solid #9AAFE5;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    border-color: #2E6AB1;
+}
+
+.pages a.nextprev {
+    font-weight: bold;
+}
+
+.pages span.nextprev {
+    color: #666;
+}
+
+.pages span.nextprev {
+    border: 1px solid #ddd;
+    color: #999;
+}
+
+.pages .nextprev-next {
+    float: right;
+}
+
+</style>
+
+
+<body>
+
+  <header>
+    <div id="navbar">
+      <div id="navbar-top">
+        <a class="logo" href="homepage1.html">
+          <img class="logo" src="image\K.png"width="100px" height="100px";>
+          <strong>Kaufhaus</strong> 
+        </a>
+
+        <div class="todo-search">
+                  <input class="todo-search-field" type="search" value="" placeholder="Search">
+        </div>
+
+              <ul class="nav" id="link">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+              </ul>
+      
+      </div>
+
+      <div id="navbar-bottom">
+
+        <div class="col-md-9" id="search">
+                <nav class="navbar navbar-inverse navbar-embossed"role="navigation">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                        <span class="sr-only">Toggle navigation</span>
+                      </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                      <ul class="nav navbar-nav navbar-left">           
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Living Room</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Bedroom</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Electronics <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Laptop</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Mobile Phone</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apparel <b class="caret"></b>
+                            </a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Top</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Bottom</a></li> 
+                              <li class="divider"></li>
+                              <li><a href="#">Accessories</a></li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" >Food
+                            </a>
+                           
+                        </li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+                </nav><!-- /navbar -->
+        </div>  
+
+
+      </div>  
+      
+</header>
+<div class="main">
+  <div id="product_list">
+    <div id="img_list_area">
+        <ul id="img_list">
+            <li>
+               <div id="product">
+                <div id="img">
+               <a href=""><img src="image\T1ASyzXx0gXXXXXXXX_!!0-item_pic.jpg_360x360q90.jpg"width="200px"></a> 
+                </div> 
+                <a href="">OAT MILK chocolate</a>
+                <p><a href="">$13.80</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p>       
+               </div>
+            </li>
+
+            <li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\chocolate.jpg" width="200px"></a>
+                </div>
+                <a href="">Ferrero Rocher</a>
+                 <p><a href="">$99.99</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p>   
+                </div>
+            </li>
+
+
+            <li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\kinderChocolate.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Kinder Chocolate</a>
+                <p><a href="">$25</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+            
+            <li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\kinder bueno.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Kinder Bueno (*3)</a>
+                <p><a href="">$18</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\QQ.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">QQ Gummies 23g</a>
+                <p><a href="">$2</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+            
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\oreo cookie.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Oreo cookie</a>
+                <p><a href="">$38</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\lays-chips.jpeg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Lays-chips</a>
+                <p><a href="">$7.8</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+
+
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\sugus.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Sugus</a>
+                <p><a href="">$65.5</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\pringles.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Pringles</a>
+                <p><a href="">$12.5</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+
+	<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\chocolate_pie.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Phaner chocolate pie</a>
+                <p><a href="">$11.5</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\tea.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Lipton tea bag</a>
+                <p><a href="">$34.5</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+<li>
+                <div id="product">
+                    <div id="img">
+                <a href=""><img src="image\instant_noodles.jpg" width="200px" height="180px"></a>
+                </div>
+                <a href="">Fantastic instant noodles</a>
+                <p><a href="">$17.8</a></p>
+                <p><a href="" class="btn btn-primary" role="button">Add to Wishlist</a></p> 
+                </div>
+            </li>
+
+
+        </ul>
+
+
+
+    </div>
+</div>
+
+<div class="pages">
+	<span class="nextprev">Previous</span>
+	<span class="current">1</span>
+	<a href="" title="Go to page 2">2</a>
+	<a href="" title="Go to page 3">3</a>
+	<a href="" title="Go to page 4">4</a>
+	<a href="" title="Go to page 5">5</a>
+    	<span>...</span>
+	<a href="/page10" title="Go to page 10">10</a>
+	<a href="/page11" title="Go to page 11">11</a>
+	<a href="/page2" class="nextprev" title="Go to Next Page">Next</a>
+</div>
+
+<br style="clear:both" />
+
+ <div id="footer">
+        <ul id="footer">
+                 <li class="active">
+                   <a class="brand" href="#">Log in</a>
+                 </li>
+                 <li><a href="#">New Account</a></li>
+                 <li><a href="#">My Cart</a></li>
+                 <li><a href="#">My Wishlist</a></li>
+                 <li><a href="#">Log out</a></li>
+
+        </ul> 
+
+
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="flat/js/jquery-1.8.3.min.js"></script>
+  <script src="flat/js/jquery-2.0.3.min.js"></script>
+    <script src="flat/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="flat/js/bootstrap.min.js"></script>
+    <script src="flat/js/bootstrap-select.js"></script>
+    <script src="flat/js/bootstrap-switch.js"></script>
+    <script src="flat/js/flatui-checkbox.js"></script>
+    <script src="flat/js/flatui-radio.js"></script>
+    <script src="flat/js/jquery.tagsinput.js"></script>
+    <script src="flat/js/jquery.placeholder.js"></script>
+    <script src="flat/js/jquery.stacktable.js"></script>
+    <script src="http://vjs.zencdn.net/4.3/video.js"></script>
+    <script src="flat/js/application.js"></script>
+
+
+
+
+</body>
+</html>
