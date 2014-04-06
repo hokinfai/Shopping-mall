@@ -30,5 +30,6 @@ module.exports = function  (app) {
   app.get('/myCart', home.myCart);
   app.get('/test', admin.test);
   app.get('/coffeeTable', item.coffeeTable);
+  app.get('/p/:productName', item.detail);
 }
 

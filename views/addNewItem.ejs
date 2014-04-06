@@ -42,6 +42,7 @@
         position:absolute;
         top:142px;
     }
+       
     .btn-success:hover {
         color: #fff;
         background-color: #48c9b0;
@@ -72,20 +73,51 @@
         <div class="form-group">
           <input type="text" class="form-control" value=""
           placeholder="Product Name" id="product-name" value="" name="name"
-          "margin-bottom:80px;">
+          style="margin-bottom:55px;">
+            <p id="nameErr" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden;position:relative;top:-60px"> 
+            * Product name cannot be empty.
+            </p>
         </div>
         <div class="form-group">
           <input type="text" class="form-control" value="" name="price"
           placeholder="Product Price" id="product-price">
+            <p id="priceErr" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
+            * Price cannot be empty.
+            </p>
+        </div>
+          <div class="form-group">
+          <input type="text" class="form-control" value="" name="inventory"
+          placeholder="Product Inventory" id="product-inventory">
+            <p id="inventoryErr1" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
+            * Inventory cannot be empty.
+            </p>
+              <p id="inventoryErr2" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden;">
+            * Inventory must be integer.
+            </p>
         </div>
         <textarea class="form-control" id="reply_content" name="detail"
-        "comment" rows="5">
+        "comment" rows="5" placeholder="Product's description">
 </textarea>
+
+           <p id="descriptionErr" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden;position:relative;"> 
+            * Description cannot be empty.
+            </p>
         <div class="form-group">
            <span class="btn btn-success fileinput-button" id=
-          "imageadd"> <span>Add files...</span>   <input id=
-          "fileupload" type="file" name="category" multiple
-          ></span><br>
+          "imageadd" style="margin-top:20px"> <span>Add files...</span>   <input id=
+          "fileupload" type="file" name="category" id=
+          "imageadd" multiple
+          ></span><p id="imgErr" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
+            * Image(s) should be uploaded.
+            </p><br>
+
+
           <br>
           <div id="files" class="files"></div><br>
         </div>
@@ -93,10 +125,13 @@
           <div class="btn-group select select-block">
             <button class=
             "btn dropdown-toggle clearfix btn-primary" data-toggle=
-            "dropdown" id="dropdown" value=""><span class=
+            "cate" id="cate" value="" name="cate"><span class=
             "filter-option pull-left">Select
             Cotegory</span>&nbsp;<span class="caret"></span></button>
-              
+              <p id="categoryErr" style=
+            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
+            * Category should be selected.
+            </p>
             <ul class="dropdown-menu dropdown-inverse" role="menu"
             style=
             "overflow-y: auto; min-height: 108px; max-height: 68px;">
@@ -122,7 +157,15 @@
               </li>
             </ul>
           </div>
-        </div><button type="submit" class="btn btn-primary" href=
+        </div>
+          <input type="text" name="category" style="visibility:hidden" >
+        <select name="cate" class="btn dropdown-toggle clearfix btn-primary">
+<option value="Food">Food</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+          <button type="submit" class="btn btn-primary" href=
         "#" id="addsubmit">Submit</button>
     </form>
       </div>
@@ -142,7 +185,65 @@
 "/jquery-file-upload/js/jquery.fileupload-process.js">
 </script> <script src=
 "/jquery-file-upload/js/jquery.fileupload-image.js">
-</script> <script>
+</script>
+       <script>
+     
+
+    $(".col-xs-3 ul li a").click(function(){
+
+      $(".filter-option.pull-left").text($(this).text());
+      $(".col-xs-3 button").val($(this).text());
+
+    });
+    </script>
+      <script language="javascript" type="text/javascript">
+      function nameValidate(){
+         if($('#product-name').val()==""){
+         $('#nameErr').css('visibility','visible')
+         }
+      }   
+         function priceValidate(){
+         if($('#product-price').val()==""){
+         $('#priceErr').css('visibility','visible')
+         }
+         }
+             function categoryValidate(){
+         if($("#categoryddm button").val()==""){
+         $('#categoryErr').css('visibility','visible')
+         }
+      }  
+             function descriptionValidate(){
+         if($("textarea").val()==""){
+         $('#descriptionErr').css('visibility','visible')
+         }
+      } 
+          function inventoryValidate(){
+               if($("#product-inventory").val()==""){
+         $('#inventoryErr1').css('visibility','visible');
+                   return true;
+         }
+           if(!$('#product-inventory').val().match(/[\d]+/)){
+               $('#inventoryErr2').css('visibility','visible');
+          }
+      }   
+      
+      </script>
+      <script language="javascript" type="text/javascript">
+    
+
+     $("button[type='submit']").click(function(event){
+            nameValidate();
+            priceValidate();
+       // categoryValidate();
+   descriptionValidate();
+         inventoryValidate();
+         if($('#nameErr').css('visibility')=="visible"||$('#categoryErr').css('visibility')=="visible"||$('#priceErr').css('visibility')=="visible"||$('#descriptionyErr').css('visibility')=="visible"||$('#inventoryErr1').css('visibility')=="visible"||$('#inventoryErr2').css('visibility')=="visible"){
+                 alert("You should correctly fullfill the register form");
+    event.preventDefault();}
+    });
+          
+    </script>
+      <script>
 /*jslint unparam: true, regexp: true */
     /*global window, $ */
     $(function () {
@@ -150,7 +251,7 @@
         // Change this to the location of your server-side upload handler:
         var count = 0;
         var url = window.location.hostname === 'blueimp.github.io' ?
-        '//jquery-file-upload.appspot.com/' : '//localhost:8888/',
+            '//jquery-file-upload.appspot.com/' : 'http://ceclinux-45996.apne1.nitrousbox.com:8888',
         uploadButton = $('<button class="upload""/>')
             .addClass('btn btn-primary')
             .prop('disabled', true)
@@ -191,7 +292,7 @@
                 .test(window.navigator.userAgent),
                 previewMaxWidth: 100,
                 previewMaxHeight: 100,
-                previewCrop: true
+                  previewCrop: true
                 }).on('fileuploadadd', function (e, data) {
                 data.context = $('<div class="canvas"/>').appendTo('#files');
                     $.each(data.files, function (index, file) {
@@ -269,15 +370,13 @@
                                 <!--});-->
                                 <!--});-->
     </script>
-      <script>
-     
+  <script>
+    $('button#cate').click(function(event){
+event.preventDefault();
+    })
+   
 
-    $(".col-xs-3 ul li a").click(function(){
-
-      $(".filter-option.pull-left").text($(this).text());
-      $(".col-xs-3 button").val($(this).text());
-
-    });
-    </script>
+                           
+         </script>
   </body>
 </html>

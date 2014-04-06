@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
   <head>
 
     <style type="text/css">
@@ -10,12 +9,12 @@ background-image: url(./cwp/image/furniturebg.png);background-repeat: no-repeat;
 position:relative;
 left: 388px;
 }
+         <% if(admin){ %>
         td{border:dashed 1px grey;}
-
+    <% } %>
     </style>
     <title></title>
   </head>
-  <body>
     <div class="main">
       <div id="left">
         <div id="product-image" style=
@@ -23,24 +22,24 @@ left: 388px;
         <div id="product-images">
           <p style="color:#16A085">
             Read more images
-            <% for(var i=0;i<imgURL.length;i++){ %>
+            
+          </p>
+          <ul id="product-images">
+            <li>
+              <a href="#"><img src="./cwp/image/CoffeeTable1.JPG"
+              width="100px" height="100px" id="1" ></a>
+            </li>
+            <li>
+              <a href="#"><img src="./cwp/image/CoffeeTable2.JPG"
+              width="100px" height="100px" id="2" ></a>
+            </li>
+              
+              <% for(var i=0;i<imgURL.length;i++){ %>
             <li id=<%= i %>>
-            <a href="#"><img src='<%= imgURL[i] %>' width="100px" height="100px" id=<% i %> onmouseover= 'select<% i %>()'></a>
+            <a href="#"><img src='<%= imgURL[i] %>' width="100px" height="100px"></a>
             </li>
 
             <% } %>
-          </p>
-          <ul>
-            <li id="1">
-              <a href="#"><img src="%20./cwp/image/CoffeeTable1.JPG"
-              width="100px" height="100px" id="1" onmouseover=
-              "select1()"></a>
-            </li>
-            <li id="2">
-              <a href="#"><img src="%20./cwp/image/CoffeeTable2.JPG"
-              width="100px" height="100px" id="2" onmouseover=
-              "select2()"></a>
-            </li>
           </ul>
         </div>
       </div>
@@ -49,9 +48,10 @@ left: 388px;
         "2" id="details">
           <tr>
             <td colspan="2">
-                <strong id="title"><%= name %><br>
-              Coffee table, black-brown</strong>
-                 <a href="#fakelink" class="btn btn-danger"id="title">Edit</a>
+
+                <p><strong id="title"><%= name %></strong></p>
+                 <% if(admin){ %> <a href="#fakelink" class="btn btn-danger"id="title">Edit</a><% } %>
+
             </td>
           </tr>
           <tr>
@@ -59,10 +59,8 @@ left: 388px;
               <p id="description">
               <%= detail %>
                               </p>
-              <p>
-                Size: 90x90 cm
-              </p>
-                <a href="#fakelink" class="btn btn-danger"id="description">Edit</a>
+             
+                 <% if(admin){ %> <a href="#fakelink" class="btn btn-danger"id="title">Edit</a><% } %>
             </td>
           </tr>
              <tr>
@@ -70,7 +68,7 @@ left: 388px;
               <p id="price">
               <%= price %>
               </p>
-              <a href="#fakelink" class="btn btn-danger"id="price">Edit</a>
+              <% if(admin){ %> <a href="#fakelink" class="btn btn-danger"id="title">Edit</a><% } %>
             </td>
           </tr>
           <% if(!admin){ %>
@@ -79,6 +77,7 @@ left: 388px;
               Your Rating:<input class="rating" data-clearable=
               "remove" id="some_id" name="your_awesome_parameter"
               type="number">
+              
             </td>
           </tr>
           <tr>
@@ -154,16 +153,16 @@ left: 388px;
 
     });
     </script> <script src=
-    "bootstrap-rating-input/build/bootstrap-rating-input.min.js"
+    "/bootstrap-rating-input/build/bootstrap-rating-input.min.js"
     type="text/javascript">
 </script> <script type="text/javascript">
-  function select1(){
+  
      
-      document.getElementById('product-image').style.backgroundImage="url(./cwp/image/CoffeeTable1.JPG)";
+      $('ul#product-images li').click(function(event){
+$('#product-image').css('background-image','url('+$(this).children().children().attr('src')+')')
       }
-      function select2(){
-      document.getElementById('product-image').style.backgroundImage="url(./cwp/image/CoffeeTable2.JPG)";
-      }
+)
+      
 
     </script> 
       
@@ -197,5 +196,22 @@ if (price!=null)
   }})
       
       </script>
+      <script>
+
+      var height = $('div#left').css('height');
+          if($('div#right').css('height')!==height){
+              $('div#right').css('height',height)
+          }
+        $('input.rating').change(function(){
+    if($(this).val()){
+        $.post('/updateRating', {rate:$(this).val(), name:$('#title').text()});
+    }else{
+    $.post('/addRating', {rate:$(this).val(), name:$('#title').text()});
+}
+})
+      </script>
   </body>
 </html>
+
+
+

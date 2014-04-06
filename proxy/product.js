@@ -14,3 +14,7 @@ exports.newProductSave = function  (name, price, category, detail, callback) {
 exports.getProductByName = function (name, callback) {
   Product.findOne({'name': name}, callback);
 };
+
+exports.getProductByCate = function  (category, callback) {
+    Product.find({'category':category}, callback);
+}

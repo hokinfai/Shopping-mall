@@ -6,7 +6,8 @@ var UserSchema = new Schema({
   email:{type:String, unique:true},
   username:{type:String},
   password:{type:String},
-  addr:{type:String}
+  addr:{type:String},
+  comment_list:[String],
 }
 )
 

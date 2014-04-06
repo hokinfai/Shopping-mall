@@ -1,14 +1,20 @@
-﻿#部署
+#部署
 
-目前只是一个空的框架而已，当然已经可以运行了
+已经部署到网上，当然还是比较容易挂掉的。。。
+
+##本地部署
 
 ```
-git clone https://username:password@bitbucket.org/ceclinux/shopmall (in the first time only)
+git clone https://username:password@bitbucket.org/ceclinux/shopmall
 进入shopmall文件夹
 npm install
 bower install
-node app.js
+gulp
 ```
+
+##网上
+
+[点这里](http://tiny.cc/shopmall)
 
 要看的文档已经移到`Wiki`
 

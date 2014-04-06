@@ -1,65 +1,57 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<style type="text/css">
+body{background-image: url(cwp/image/salebg.jpg);background-repeat: no-repeat;background-size: cover;}</style>
+<div class="main">
 
-    <style type="text/css">
-body{background-image: url(./cwp/image/salebg.jpg);background-repeat: no-repeat;background-size: cover;}
-    </style>
-    <title></title>
-  </head>
-  <body>
-    <div class="main">
-      <form method="post" action="/register">
-        <div class="register-form">
-          <h1 style="color:#1ABC9C;font-size:30px">
-            Register Account Now!
-          </h1>
+
+
+     <form method="post" action="/register" >
+      <div class="register-form">
+          
+   <h1 style="color:#1ABC9C;font-size:30px">Register Account Now!</h1>
+            
+            
+             <div class="form-group">
+              <input type="text" class="form-control login-field" value=""
+              placeholder="Your Name (e.g. Zhang San)" id="username"
+              name="username"
+              value="">
+              
+            </div>
+           
           <div class="form-group">
-            <input type="text" class="form-control login-field"
-            placeholder="Your Name (e.g. Zhang San)" id="username"
-            name="username" value="">
+              <input type="text" class="form-control login-field" value=""
+              placeholder="Your E-mail" id="email" name="email" >
+               <p id="mailErr" style="font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden"> * You should enter your e-mail correctly.</p> 
+            </div>
+          <div class="form-group">
+              <input type="text" class="form-control login-field" value=""
+              placeholder="Your Shipping Address" id="addr" name="addr" >
+              
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control login-field"
+              value=""
+              placeholder="Password  (only letters and numbers,length: 6-16)"
+              id="password" name="password" >
+              <p id="passErr" style="font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden"> * Should only conclude letters and numbers,length should be 6-16.</p>   
+              
+            </div>
+          <div class="form-group">
+              <input type="password" class="form-control login-field" value="" placeholder="Confirm Password" id="register-confirmpass">
+            <p id="confirmErr" style="font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden"> * Not as same as password you first typed in.</p>  
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-left:120px"href="#" >Continue</button>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control login-field"
-            value="" placeholder="Your E-mail" id="email" name=
-            "email">
-            <p id="mailErr" style=
-            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
-            * You should enter your e-mail correctly.
-            </p>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control login-field"
-            value="" placeholder="Your Shipping Address" id="addr"
-            name="addr">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control login-field"
-            value="" placeholder=
-            "Password (only letters and numbers,length: 6-16)" id=
-            "password" name="password">
-            <p id="passErr" style=
-            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
-            * Should only conclude letters and numbers,length
-            should be 6-16.
-            </p>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control login-field"
-            value="" placeholder="Confirm Password" id=
-            "register-confirmpass">
-            <p id="confirmErr" style=
-            "font-size: 12px;color:red;margin-bottom: -19px;visibility:hidden">
-            * Not as same as password you first typed in.
-            </p>
-          </div><button type="submit" class="btn btn-primary"
-          style="margin-left:120px" href="#">Continue</button>
-        </div>
-      </form>
-    </div><script src="flat-ui-official/js/jquery-1.8.3.min.js">
-</script> <script src="flat-ui-official/js/bootstrap.min.js">
-</script> <script language="javascript" type="text/javascript">
- 
+
+</form>
+  </div>
+
+<script src="flat-ui-official/js/jquery-1.8.3.min.js"></script>
+  <script src="flat-ui-official/js/bootstrap.min.js"></script>
+    
+<script language="javascript" type="text/javascript">
+     
         function validateConfirmpass(){
           var confirmpass=document.getElementById('register-confirmpass').value;
           var pass=document.getElementById('password').value;
@@ -72,15 +64,18 @@ body{background-image: url(./cwp/image/salebg.jpg);background-repeat: no-repeat;
           document.getElementById('confirmErr').style.visibility="hidden";
           return true;
       }
-    </script> <script language="javascript" type="text/javascript">
+        </script>
+      
 
+<script language="javascript" type="text/javascript">
+    
     function validatePassword() {
     var newPassword = document.getElementById('password').value;
     /*var minNumberofChars = 6;
     var maxNumberofChars = 16;*/
     var regularExpression  = /^(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,16})$/;
-
-    /* if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+   
+   /* if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
         return false;
     }*/
         if(newPassword!==""){
@@ -88,18 +83,19 @@ body{background-image: url(./cwp/image/salebg.jpg);background-repeat: no-repeat;
         document.getElementById('passErr').style.visibility="visible";
         return false;
     }
-    }
+}
        document.getElementById('passErr').style.visibility="hidden";
         return true;
     } 
-    </script> <script language="javascript" type="text/javascript">
-function validateMail() {
+    </script>
+
+<script language="javascript" type="text/javascript">function validateMail() {
     var mail = document.getElementById('email').value;
     /*var minNumberofChars = 6;
     var maxNumberofChars = 16;*/
     var regularExpression  = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-
-    /* if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+   
+   /* if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
         return false;
     }*/
         if(mail!==""){
@@ -107,21 +103,21 @@ function validateMail() {
         document.getElementById('mailErr').style.visibility="visible";
         return false;
     }
-    }
+}
        document.getElementById('mailErr').style.visibility="hidden";
         return true;
-    } 
-    </script> <script language="javascript" type="text/javascript">
-    
+    } </script>
 
+
+    <script language="javascript" type="text/javascript">
+        
+    
      $('button[type="submit"]').click(function(event){
             validatePassword();
             validateConfirmpass(); 
             validateMail();  if(document.getElementById("confirmErr").style.visibility=="visible"||document.getElementById("passErr").style.visibility=="visible"||document.getElementById("mailErr").style.visibility=="visible"||document.getElementById("register-name").value==""||document.getElementById("password").value==""||document.getElementById("addr").value==""||document.getElementById("register-confirmpass").value==""||document.getElementById("email").value==""){
                  alert("You should correctly fullfill the register form");
-    event.preventDefault();}
-    });
+  event.preventDefault();}
+});
           
     </script>
-  </body>
-</html>

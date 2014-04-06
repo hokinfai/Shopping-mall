@@ -27,11 +27,11 @@ gulp.task('tidyejs', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch',function() {
-gulp.watch('./views/*.ejs', ['tidyejs', 'close', 'server']);
+gulp.watch('./views/*.ejs', ['close', 'server']);
 gulp.watch('./controllers/*.js', ['close','server']);
 gulp.watch('./proxy/*.js', ['close','server']);
 gulp.watch('./routes.js', ['close','server']);
 gulp.watch('./models/*.js', ['close','server']);
 })
 
-gulp.task('default', [ 'tidyejs', 'fileserver','server', 'watch']);
+gulp.task('default', [ 'fileserver','server', 'watch']);

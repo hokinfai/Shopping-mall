@@ -36,7 +36,7 @@ exports.saveOneItem = function  (req, res) {
         })
       })
       var name = req.body.name;
-      var category = req.body.category;
+      var category = req.body.cate;
       var price = req.body.price;
       var detail = req.body.detail;
       function notMini (element) {
@@ -99,3 +99,5 @@ exports.test = function  (req, res, next) {
     // foo
   });
 }
+
+

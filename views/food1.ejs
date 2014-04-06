@@ -18,7 +18,7 @@ body{background-image: url(./cwp/image/foodbg.jpg)}
             <button class=
             "btn dropdown-toggle clearfix btn-primary" data-toggle=
             "dropdown" id="dropdown" value="1"><span class=
-            "filter-option pull-left">sort by</span>&nbsp;</button>
+            "filter-option pull-left">sort by</span>&nbsp;<span class="caret">&lrm;</span></button>
             <ul class="dropdown-menu dropdown-inverse" role="menu"
             style=
             "overflow-y: auto; min-height: 108px; max-height: 68px;">
@@ -36,16 +36,16 @@ body{background-image: url(./cwp/image/foodbg.jpg)}
         <div id="product_list">
           <div id="img_list_area">
             <ul id="img_list">
+                <% for(var i=0;i<product.length;i++){ %>
               <li>
                 <div id="product">
                   <div id="img">
-                    <a href=""><img src="./cwp/image/water.jpg"
+                      <a href=""><img src="<%= product[i].imgPath %>"
                     width="200px"></a>
-                  </div><a href="">FIJI Natural Artesian
-                  Water</a><br>
-                  <a href="" class="price">$31.99</a>
+            </div><a href=""><%= product[i].name %></a><br>
+            <a href="" class="price"><%= product[i].price %></a>
                   <p>
-                    <a href="">Food</a>
+                  <a href=""><%= product[i].category %></a>
                   </p>
                     <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
                      
@@ -55,95 +55,8 @@ body{background-image: url(./cwp/image/foodbg.jpg)}
                   </p>
                 </div>
               </li>
-              <li>
-                <div id="product">
-                  <div id="img">
-                    <a href=""><img src="./cwp/image/milk.jpg" width=
-                    "200px" height="180px"></a>
-                  </div><a href="">Organic Valley Lowfat
-                  Milk</a><br>
-                  <a href="" class="price">$25</a>
-                  <p>
-                    <a href="">Food</a>
-                  </p>
-                    <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
-                  <p>
-                   <!-- <a href="" class="btn btn-danger" role=
-                    "button">Delete</a>-->
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div id="product">
-                  <div id="img">
-                    <a href=""><img src="./cwp/image/vitasoy2.jpg"
-                    width="200px" height="180px"></a>
-                  </div><a href="">Vitasoy Soy Drink</a><br>
-                  <a href="" class="price">$20</a>
-                  <p>
-                    <a href="">Food</a>
-                  </p>
-                    <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
-                  <p>
-                   <!-- <a href="" class="btn btn-danger" role=
-                    "button">Delete</a>-->
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div id="product">
-                  <div id="img">
-                    <a href=""><img src=
-                    "./cwp/image/oreo%20cookie.jpg" width="200px"
-                    height="180px"></a>
-                  </div><a href="">Oreo cookie</a><br>
-                  <a href="" class="price">$38</a>
-                  <p>
-                    <a href="">Food</a>
-                  </p>
-                    <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
-                  <p>
-                    <!--<a href="" class="btn btn-danger" role=
-                    "button">Delete</a>-->
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div id="product">
-                  <div id="img">
-                    <a href=""><img src="./cwp/image/rice.jpg" width=
-                    "200px" height="180px"></a>
-                  </div><a href="">Nishiki Premium Rice</a><br>
-                  <a href="" class="price">$17.8</a>
-                  <p>
-                    <a href="">Food</a>
-                  </p>
-                    <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
-                    
-                  <p>
-                   <!-- <a href="" class="btn btn-danger" role=
-                    "button">Delete</a>-->
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div id="product">
-                  <div id="img">
-                    <a href=""><img src="./cwp/image/sugus.jpg"
-                    width="200px" height="180px"></a>
-                  </div><a href="">Sugus</a><br>
-                  <a href="" class="price">$65.5</a>
-                  <p>
-                    <a href="">Food</a>
-                  </p>
-                    <i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i><i class='glyphicon glyphicon-star-empty'>&lrm;</i>
-                  <p>
-                   <!-- <a href="" class="btn btn-danger" role=
-                    "button">Delete</a>-->
-                  </p>
-                </div>
-              </li>
-            </ul>
+              <% } %>
+                          </ul>
           </div>
           <div class="pagination">
             <ul>

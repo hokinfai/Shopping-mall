@@ -4,3 +4,4 @@ node_modules
 .vimsession
 *.swp
 images
+build
